@@ -23,13 +23,6 @@ public class AndroidUtils {
         return "";
     }
 
-    /**
-     * 如果没有找到资源返回0
-     *
-     * @param context
-     * @param imageName
-     * @return
-     */
     public static int getMipmapResourceByName(Context context, String imageName) {
         return getResourceByName(context, "mipmap", imageName);
     }
@@ -45,7 +38,6 @@ public class AndroidUtils {
         if (!TextUtils.isEmpty(deviceId) && !isAllZero(deviceId)) return deviceId;
 
         deviceId = getAndroidId(context);
-        // 在主流厂商生产的设备上，有一个经常的bug，每个设备都会产生相同的ANDROID_ID：9774d56d682e549c
         if (!TextUtils.isEmpty(deviceId)
                 && !isAllZero(deviceId)
                 && !"9774d56d682e549c".equals(deviceId)) return deviceId;
