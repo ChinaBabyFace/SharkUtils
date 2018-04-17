@@ -16,10 +16,14 @@ buildscript {
     }
 }
 
+
 allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://dl.bintray.com/chinashark/maven'//这个地址在包的页面的右方
+        }
     }
 }
 
