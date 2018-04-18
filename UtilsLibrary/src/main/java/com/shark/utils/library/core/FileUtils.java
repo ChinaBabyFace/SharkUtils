@@ -9,9 +9,9 @@ import java.io.OutputStream;
 
 public class FileUtils {
     public static void copyToPrivateFolder(Context context, InputStream inputStream, String nameForSave) {
+        OutputStream outputStream = null;
         try {
-
-            OutputStream outputStream = context.openFileOutput(nameForSave, Context.MODE_PRIVATE);
+            outputStream = context.openFileOutput(nameForSave, Context.MODE_PRIVATE);
             byte[] cache = new byte[1024];
             while (inputStream.read(cache) != -1) {
                 outputStream.write(cache);
@@ -20,6 +20,20 @@ public class FileUtils {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (inputStream != null)
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            if (outputStream!=null){
+                try {
+                    outputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
