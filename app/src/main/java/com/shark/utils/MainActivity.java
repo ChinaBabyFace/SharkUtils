@@ -12,5 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SLog.e(this,"SLog引用成功");
+        String s="I LOVE YOU";
+        s.getBytes();
     }
 }
