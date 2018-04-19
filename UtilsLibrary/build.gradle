@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-version = "1.0.2"
+version = "1.0.3"
 android {
     compileSdkVersion 27
     resourcePrefix "shark_utils__"    //这个随便填
