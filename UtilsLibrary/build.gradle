@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-version = "1.0.1"
+version = "1.0.2"
 android {
     compileSdkVersion 27
     resourcePrefix "shark_utils__"    //这个随便填
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 27
-        versionCode 2
+        versionCode 3
         versionName version
     }
     buildTypes {
