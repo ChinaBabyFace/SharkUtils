@@ -23,6 +23,17 @@ public class AndroidUtils {
         return "";
     }
 
+    public static int getVersionCode(Context context) {
+        PackageManager manager = context.getPackageManager();
+        try {
+            PackageInfo info = manager.getPackageInfo(context.getPackageName(), 0);
+            return info.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public static int getMipmapResourceByName(Context context, String imageName) {
         return getResourceByName(context, "mipmap", imageName);
     }
