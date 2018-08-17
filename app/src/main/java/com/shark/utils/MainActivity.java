@@ -3,7 +3,6 @@ package com.shark.utils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.shark.utils.library.core.SLog;
-import javax.annotation.*;
 public class MainActivity extends AppCompatActivity {
 
     @Override

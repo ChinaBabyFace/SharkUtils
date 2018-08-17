@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-version = "1.0.4"
+version = "1.0.6"
 android {
     compileSdkVersion 28
     resourcePrefix "shark_utils__"    //这个随便填
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 4
+        versionCode 6
         versionName version
     }
     buildTypes {
@@ -24,8 +24,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 def siteUrl = 'https://github.com/ChinaBabyFace/SharkUtils'
 def gitUrl = 'https://github.com/ChinaBabyFace/SharkUtils.git'

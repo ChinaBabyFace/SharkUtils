@@ -1,0 +1,4 @@
+Jcenter
+第一步Build
+第二部gradlew install
+第三部bintrayUpload

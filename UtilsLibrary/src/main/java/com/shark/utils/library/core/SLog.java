@@ -3,14 +3,13 @@ package com.shark.utils.library.core;
 
 import android.util.Log;
 
-import com.shark.utils.library.BuildConfig;
 import com.shark.utils.library.UtilsSetting;
 
 
 
 public class SLog {
 
-	public static final boolean IS_DEBUG = BuildConfig.DEBUG;
+	public static final boolean IS_DEBUG = true;
 	public static final String GLOBAL_TAG = UtilsSetting.APP_LOG_TAG;
 
 	public static String getObjectName(Object object) {
